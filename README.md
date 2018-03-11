@@ -13,6 +13,7 @@ This repository contains python implementations of common design patterns based 
 ```bash
 $ git clone https://github.com/kaduev13/python-design-patterns.git
 $ cd python-design-patterns
+$ pip3 install -r requirements.txt
 ```
 
 ## Testing
