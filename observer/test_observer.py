@@ -14,6 +14,7 @@ class TestObserver:
     @pytest.fixture(scope='function', autouse=True)
     def before_each(self, capsys: CaptureFixture) -> None:
         self._capsys = capsys
+        capsys.readouterr()
 
     def assert_printed(self, kpis: Optional[Tuple[int, int, int]], closed: Optional[int]) -> None:
         out, _ = self._capsys.readouterr()
