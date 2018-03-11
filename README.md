@@ -80,3 +80,13 @@ In this example, we need to build computers with different configurations.
 * `builder.default_computer_builder.DefaultComputerBuilder` – default computer configuration.
 * `builder.cheap_computer_builder.CheapComputerBuilder` – cheap computer configuration.
 * `builder.director.Director` – director, the class, that knows how to build a computer.
+
+### Factory
+
+Classic factory pattern implementation with factory-loader.
+
+* `factory.loader.load_factory` – loads factory based on factory's name.
+* `factory.factories.factory.Factory` – abstract car factory.
+* `factory.factories.*` – concrete cars factories implementations.
+* `factory.cars.car.Car` – abstract car.
+* `factory.cars.*` – concrete cars.
