@@ -90,3 +90,12 @@ Classic factory pattern implementation with factory-loader.
 * `factory.factories.*` – concrete cars factories implementations.
 * `factory.cars.car.Car` – abstract car.
 * `factory.cars.*` – concrete cars.
+
+### Abstract factory
+
+There are two car manufacturers: GM and Ford. Each of them can create sport, luxury and economy cars.
+
+ * `abstract_factory.factories.factory.Factory` – abstract factory that can create sport, luxury and sport cars.
+ * `abstract_factory.factories.*` – manufacturer-specific factories (derived from base Factory).
+ * `abstract_factory.cars.car.*` – abstract `SportCar`, `EconomyCar` and `LuxuryCar`
+ * `abstract_factory.cars.ford.*` and `abstract_factory.cars.gm.*` – manufacturer-specific cars.
