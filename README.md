@@ -70,3 +70,13 @@ Two implementations of Singleton pattern.
 
 * `singleton.singleton_base.SingletonBase` – singleton, implemented as a base class.
 * `singleton.singleton_meta.SingletonMeta` – singleton, implemented as a meta class.
+
+### Builder
+
+In this example, we need to build computers with different configurations.
+
+* `builder.computer.Computer` – computer that we build.
+* `builder.computer_builder.ComputerBuilder` – abstract computer builder.
+* `builder.default_computer_builder.DefaultComputerBuilder` – default computer configuration.
+* `builder.cheap_computer_builder.CheapComputerBuilder` – cheap computer configuration.
+* `builder.director.Director` – director, the class, that knows how to build a computer.
