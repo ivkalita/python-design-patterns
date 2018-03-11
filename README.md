@@ -40,3 +40,16 @@ In this example we need to calculate Order shipping cost, that depends on shippi
 * `ShippingCost` – context, that contains selected shipping strategy.
 * `Strategy` – abstract strategy with the only method `calculate(order: Order)`.
 * `FedExStrategy`, `PostalStrategy`, `UPSStrategy` – implementations of concrete shipping strategies.
+
+### Observer
+
+Classic observer pattern implementation located in `observer.lib` package.
+* `observer.lib.Observer` – abstract observer class
+* `observer.lib.Subject` – abstract subject class with implemented default behavior 
+
+In the example we have some "source" – `KPIs`, that is a `Subject` descendant. Also
+we have two observers: `ClosedTickets` and `KPIsDisplay`. When the `KPIs` changes, it
+notifies observers instances and they do their job.
+* `KPIs` – event source, subject
+* `ClosedTickets` – observer, calculates (and prints) the sum of total closed tickets
+* `KPIsDisplay` – observer, just displays the current KPIs every time `update` is fired.
