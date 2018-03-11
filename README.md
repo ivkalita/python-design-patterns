@@ -22,7 +22,7 @@ $ pip3 install -r requirements-test.txt
 $ pytest
 ```
 
-## Modules
+## Patterns
 
 ### ABC Usage
 
