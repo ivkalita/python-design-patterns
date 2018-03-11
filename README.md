@@ -63,3 +63,10 @@ Command pattern with commands auto-discovery and fallback to NoCommand if there 
 * `command.executor.CommandExecutor` – the class, that is able to discovery and execute commands.
 * `command.command.Command` – abstract console command.
 * `command.no_command.NoCommand` – fallback command, that will be executed if no other command found.
+
+### Singleton
+
+Two implementations of Singleton pattern.
+
+* `singleton.singleton_base.SingletonBase` – singleton, implemented as a base class.
+* `singleton.singleton_meta.SingletonMeta` – singleton, implemented as a meta class.
