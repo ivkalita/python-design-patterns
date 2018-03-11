@@ -53,3 +53,12 @@ notifies observers instances and they do their job.
 * `KPIs` – event source, subject
 * `ClosedTickets` – observer, calculates (and prints) the sum of total closed tickets
 * `KPIsDisplay` – observer, just displays the current KPIs every time `update` is fired.
+
+### Command
+
+Command pattern with commands auto-discovery and fallback to NoCommand if there is no available command.
+
+* `command.commands.*` – contains custom available commands.
+* `command.executor.CommandExecutor` – the class, that is able to discovery and execute commands.
+* `command.command.Command` – abstract console command.
+* `command.no_command.NoCommand` – fallback command, that will be executed if no other command found.
