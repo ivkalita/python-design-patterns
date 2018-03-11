@@ -18,12 +18,9 @@ class TestObserver:
 
     def assert_printed(self, kpis: Optional[Tuple[int, int, int]], closed: Optional[int]) -> None:
         out, _ = self._capsys.readouterr()
-        expected = ''
-        if closed:
-            expected += 'Tickets closed: {}\n'.format(closed)
-        if kpis:
-            expected += 'Current KPIs:\nopened = {}\nclosed = {}\nnew = {}\n'.format(kpis[0], kpis[1], kpis[2])
-        assert expected == out
+        part_1 = 'Tickets closed: {}\n'.format(closed) if closed else ''
+        part_2 = 'Current KPIs:\nopened = {}\nclosed = {}\nnew = {}\n'.format(kpis[0], kpis[1], kpis[2]) if kpis else ''
+        assert part_1 + part_2 == out or part_2 + part_1 == out
 
     def test_kpis_changes(self) -> None:
         with KPIs() as kpis:
